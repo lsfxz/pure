@@ -336,6 +336,8 @@ prompt_pure_setup() {
 	# vcs_info_msg_1_ = 'x%R' git top level (%R), x-prefix prevents creation of a named path (AUTO_NAME_DIRS)
 	zstyle ':vcs_info:git*' formats ' %b' 'x%R'
 	zstyle ':vcs_info:git*' actionformats ' %b|%a' 'x%R'
+        zstyle ':prezto:module:editor:info:keymap:primary'   format "❯%f"
+        zstyle ':prezto:module:editor:info:keymap:alternate' format "❮%f"
 
 	# if the user has not registered a custom zle widget for clear-screen,
 	# override the builtin one so that the preprompt is displayed correctly when
@@ -351,7 +353,7 @@ prompt_pure_setup() {
 	[[ $UID -eq 0 ]] && prompt_pure_username=' %F{white}%n%f%F{242}@%m%f'
 
 	# prompt turns red if the previous command didn't exit with 0
-	PROMPT="%(?.%F{magenta}.%F{red})${PURE_PROMPT_SYMBOL:-❯}%f "
+	PROMPT='%T %(?.%F{magenta}.%F{red})${editor_info[keymap]} '
 }
 
 prompt_pure_setup "$@"
