@@ -24,7 +24,7 @@ Most prompts are cluttered, ugly and slow. I wanted something visually pleasing 
 
 ## Install
 
-Can be installed with `npm` or manually. Requires git 2.0.0+ and ZSH 5.0.0+.
+Can be installed with `npm` or manually. Requires Git 2.0.0+ and ZSH 5.2+. Older versions of ZSH are known to work, but they are **not** recommended.
 
 ### npm
 
@@ -137,14 +137,26 @@ To have commands colorized as seen in the screenshot, install [zsh-syntax-highli
 
 ### [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
 
-1. Symlink (or copy) `pure.zsh` to `~/.oh-my-zsh/custom/themes/pure.zsh-theme`.
-2. Set `ZSH_THEME="pure"` in your `.zshrc` file.
+1. Symlink (or copy) `pure.zsh` to `~/.oh-my-zsh/custom/pure.zsh-theme`.
+2. Symlink (or copy) `async.zsh` to `~/.oh-my-zsh/custom/async.zsh`.
+3. Set `ZSH_THEME="pure"` in your `.zshrc` file.
+
+Or skip the `oh-my-zsh` integration above and simply:
+
+1. Set `ZSH_THEME=""` in your `.zshrc` to disable oh-my-zsh themes.
+2. Follow the Pure [Install](#install) instructions.
 
 ### [prezto](https://github.com/sorin-ionescu/prezto)
 
 Pure is bundled with Prezto. No need to install it.
 
 Set `zstyle ':prezto:module:prompt' theme 'pure'` in `~/.zpreztorc`.
+
+### [zim](https://github.com/Eriner/zim)
+
+Pure is bundled with Zim. No need to install it.
+
+Set `zprompt_theme='pure'` in `~/.zimrc`.
 
 ### [antigen](https://github.com/zsh-users/antigen)
 
@@ -201,6 +213,7 @@ On a default setup, running the command `kldload pty` should do the trick. If yo
 	* [rafaelrinaldi/pure](https://github.com/rafaelrinaldi/pure), support for bare Fish and various framework ([Oh-My-Fish](https://github.com//oh-my-fish/oh-my-fish), [Fisherman](https://github.com//fisherman/fisherman) and [Wahoo](https://github.com//bucaran/wahoo)).
 * **Zsh**
   * [therealklanni/purity](https://github.com/therealklanni/purity): a more compact current working directory, important details on the main prompt line, and extra Git indicators.
+  * [intelfx/pure](https://github.com/intelfx/pure): Solarized-friendly colors, highly verbose and fully async Git integration
 
 ## Team
 
