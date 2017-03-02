@@ -146,7 +146,7 @@ Or skip the `oh-my-zsh` integration above and simply:
 1. Set `ZSH_THEME=""` in your `.zshrc` to disable oh-my-zsh themes.
 2. Follow the Pure [Install](#install) instructions.
 
-### [prezto](https://github.com/sorin-ionescu/prezto)
+### [prezto](https://github.com/zsh-users/prezto)
 
 Pure is bundled with Prezto. No need to install it.
 
@@ -162,18 +162,27 @@ Set `zprompt_theme='pure'` in `~/.zimrc`.
 
 Update your `.zshrc` file with the following two lines (order matters). Do not use the `antigen theme` function.
 
-```console
-$ antigen bundle mafredri/zsh-async
-$ antigen bundle sindresorhus/pure
+```sh
+antigen bundle mafredri/zsh-async
+antigen bundle sindresorhus/pure
 ```
 
 ### [antibody](https://github.com/getantibody/antibody)
 
 Update your `.zshrc` file with the following two lines (order matters):
 
-```console
-$ antibody bundle mafredri/zsh-async
-$ antibody bundle sindresorhus/pure
+```sh
+antibody bundle mafredri/zsh-async
+antibody bundle sindresorhus/pure
+```
+
+### [zplug](https://github.com/zplug/zplug)
+
+Update your `.zshrc` file with the following two lines:
+
+```sh
+zplug mafredri/zsh-async, from:github
+zplug sindresorhus/pure, use:pure.zsh, from:github, as:theme
 ```
 
 ## FAQ
