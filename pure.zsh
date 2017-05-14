@@ -220,8 +220,6 @@ prompt_pure_async_vcs_info() {
 	# export branch (%b) and git toplevel (%R)
 	zstyle ':vcs_info:git*' formats '%b' '%R'
 	zstyle ':vcs_info:git*' actionformats '%b|%a' '%R'
-        zstyle ':prezto:module:editor:info:keymap:primary'   format "❯%f"
-        zstyle ':prezto:module:editor:info:keymap:alternate' format "❮%f"
 
 	vcs_info
 
@@ -448,6 +446,9 @@ prompt_pure_setup() {
 
 	add-zsh-hook precmd prompt_pure_precmd
 	add-zsh-hook preexec prompt_pure_preexec
+
+        zstyle ':prezto:module:editor:info:keymap:primary'   format "❯%f"
+        zstyle ':prezto:module:editor:info:keymap:alternate' format "❮%f"
 
 	# show username@host if logged in through SSH
 	[[ "$SSH_CONNECTION" != '' ]] && prompt_pure_username='%F{242}%n@%m%f'
